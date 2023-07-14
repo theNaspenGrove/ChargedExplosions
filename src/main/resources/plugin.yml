@@ -1,0 +1,6 @@
+name: ChargedExplosions
+version: '${project.version}'
+main: net.mov51.chargedexplosions.ChargedExplosions
+api-version: 1.19
+authors: [ mov51 ]
+description: Charge tnt with a lightning strike
