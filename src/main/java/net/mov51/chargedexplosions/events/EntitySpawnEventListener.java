@@ -1,6 +1,7 @@
 package net.mov51.chargedexplosions.events;
 
 import org.bukkit.Location;
+import org.bukkit.entity.Explosive;
 import org.bukkit.entity.TNTPrimed;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,6 +16,9 @@ public class EntitySpawnEventListener implements Listener {
             Location spawnLocation = event.getLocation().toBlockLocation();
             if(chargedLocations.contains(spawnLocation.getBlockX() + "," + spawnLocation.getBlockY() + "," + spawnLocation.getBlockZ())){
                 event.getEntity().setGlowing(true);
+                ((Explosive)event.getEntity()).setYield((float) 6);
+                ((Explosive)event.getEntity()).setIsIncendiary(true);
+                chargedLocations.remove(spawnLocation.getBlockX() + "," + spawnLocation.getBlockY() + "," + spawnLocation.getBlockZ());
             }
         }
     }

@@ -17,6 +17,5 @@ public class TNTPrimeEventListener implements Listener {
                 chargedLocations.add(primeLocation.getBlockX() + "," + primeLocation.getBlockY() + "," + primeLocation.getBlockZ());
             }
         }
-
     }
 }
