@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 public class BlockSearch {
-    public static List<Block> SearchByExplosion(Location location, Material material){
+    public static List<Block> SearchByExplosion(Location location, float strength ,Material material){
         Random r = new Random();
         int k;
         int l;
@@ -25,8 +25,9 @@ public class BlockSearch {
                         d /= g;
                         e /= g;
                         f /= g;
-                        //4 is the strength of tnt explosions
-                        float h = 4 * (0.7F + r.nextFloat() * 0.6F);
+                        //4 is the default strength of tnt explosions
+                        strength = strength == 0 ? strength : 4;
+                        float h = strength * (0.7F + r.nextFloat() * 0.6F);
                         double m = location.getX();
                         double n = location.getY();
                         double o = location.getZ();

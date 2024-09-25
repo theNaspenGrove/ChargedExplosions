@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Explosive;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
@@ -23,7 +22,7 @@ public class EntityExplodeEventListener implements Listener {
                         block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.BUDDING_AMETHYST, 1));
                     }
                 }
-                for(Block bedrock : SearchByExplosion(event.getLocation(), Material.BEDROCK)){
+                for(Block bedrock : SearchByExplosion(event.getLocation(), 8 ,Material.BEDROCK)){
                     setBlock(bedrock,Material.AIR,"#charged_tnt");
                 }
             }
