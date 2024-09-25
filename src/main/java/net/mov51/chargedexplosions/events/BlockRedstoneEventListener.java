@@ -16,8 +16,9 @@ public class BlockRedstoneEventListener implements Listener {
             Block lightningRod = event.getBlock();
             Block attachedBlock = event.getBlock().getWorld().getBlockAt(lightningRod.getLocation().add(((Directional) event.getBlock().getBlockData()).getFacing().getOppositeFace().getDirection()));
             if(attachedBlock.getType() == Material.DEEPSLATE_DIAMOND_ORE){
-                attachedBlock.setType(Material.BEDROCK);
                 setBlock(attachedBlock,Material.BEDROCK,"#lightning_rod");
+            } else if (attachedBlock.getType() == Material.BEDROCK) {
+                setBlock(attachedBlock,Material.AIR,"#lightning_rod");
             }
         }
     }
