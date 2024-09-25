@@ -1,4 +1,4 @@
-package net.mov51.chargedexplosions.events;
+package mov.naspen.chargedexplosions.events;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Explosive;
@@ -7,7 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntitySpawnEvent;
 
-import static net.mov51.chargedexplosions.ChargedExplosions.chargedLocations;
+import static mov.naspen.chargedexplosions.ChargedExplosions.chargedLocations;
 
 public class EntitySpawnEventListener implements Listener {
     @EventHandler

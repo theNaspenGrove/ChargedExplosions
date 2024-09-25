@@ -1,4 +1,4 @@
-package net.mov51.chargedexplosions.utilities;
+package mov.naspen.chargedexplosions.utilities;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

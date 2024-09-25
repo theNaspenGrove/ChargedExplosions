@@ -1,4 +1,4 @@
-package net.mov51.chargedexplosions.events;
+package mov.naspen.chargedexplosions.events;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;

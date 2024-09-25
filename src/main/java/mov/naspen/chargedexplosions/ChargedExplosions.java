@@ -1,6 +1,6 @@
-package net.mov51.chargedexplosions;
+package mov.naspen.chargedexplosions;
 
-import net.mov51.chargedexplosions.events.*;
+import mov.naspen.chargedexplosions.events.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,6 +22,7 @@ public final class ChargedExplosions extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityExplodeEventListener(), this);
         getServer().getPluginManager().registerEvents(new EntityDamageEventListener(), this);
         getServer().getPluginManager().registerEvents(new BlockRedstoneEventListener(), this);
+        getServer().getPluginManager().registerEvents(new ProjectileHitEventListener(), this);
 
     }
 

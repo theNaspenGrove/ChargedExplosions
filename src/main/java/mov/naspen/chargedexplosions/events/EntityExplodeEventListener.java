@@ -1,4 +1,4 @@
-package net.mov51.chargedexplosions.events;
+package mov.naspen.chargedexplosions.events;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -10,7 +10,7 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.inventory.ItemStack;
 
 import static mov.naspen.periderm.helpers.BlockManager.setBlock;
-import static net.mov51.chargedexplosions.utilities.BlockSearch.SearchByExplosion;
+import static mov.naspen.chargedexplosions.utilities.BlockSearch.SearchByExplosion;
 
 public class EntityExplodeEventListener implements Listener {
     @EventHandler

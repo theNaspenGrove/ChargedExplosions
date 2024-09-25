@@ -1,4 +1,4 @@
-package net.mov51.chargedexplosions.events;
+package mov.naspen.chargedexplosions.events;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.TNTPrimeEvent;
 
-import static net.mov51.chargedexplosions.ChargedExplosions.chargedLocations;
+import static mov.naspen.chargedexplosions.ChargedExplosions.chargedLocations;
 
 public class TNTPrimeEventListener implements Listener {
     @EventHandler
