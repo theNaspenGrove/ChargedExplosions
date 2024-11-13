@@ -4,3 +4,5 @@ main: mov.naspen.chargedexplosions.ChargedExplosions
 api-version: 1.19
 authors: [ naspen ]
 description: Charge tnt with a lightning strike
+depend: [ Periderm ]
+softdepend: [CoreProtect]

@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.inventory.ItemStack;
 
-import static mov.naspen.periderm.helpers.BlockManager.setBlock;
+import static mov.naspen.chargedexplosions.ChargedExplosions.coreProtectHelper;
 import static mov.naspen.chargedexplosions.utilities.BlockSearch.SearchByExplosion;
 
 public class EntityExplodeEventListener implements Listener {
@@ -23,7 +23,7 @@ public class EntityExplodeEventListener implements Listener {
                     }
                 }
                 for(Block bedrock : SearchByExplosion(event.getLocation(), 8 ,Material.BEDROCK)){
-                    setBlock(bedrock,Material.AIR,"#charged_tnt");
+                    coreProtectHelper.setBlock(bedrock,Material.AIR,"#charged_tnt");
                 }
             }
         }
