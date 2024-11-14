@@ -1,6 +1,7 @@
 package mov.naspen.chargedexplosions.events;
 
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Trident;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,14 +19,20 @@ public class ProjectileHitEventListener implements Listener {
         if(event.getHitBlock() == null) {
             return;
         }
-        if(((Trident) event.getEntity()).getItem().getEnchantments().containsKey(org.bukkit.enchantments.Enchantment.CHANNELING)) {
+        if(((Trident) event.getEntity()).getItemStack().getEnchantments().containsKey(org.bukkit.enchantments.Enchantment.CHANNELING)) {
             if(event.getHitBlock().getType() == Material.LIGHTNING_ROD){
-                if(!event.getEntity().getWorld().isBedWorks()) {
-                    if(event.getHitBlock().getWorld().getHighestBlockAt(event.getHitBlock().getLocation()).getLocation().getBlockY() == event.getHitBlock().getLocation().getBlockY()){
-                        event.getHitBlock().getWorld().strikeLightning(event.getHitBlock().getLocation().add(0,1,0));
-                    }
-                }
+                makeLightning(event.getHitBlock());
             }
         }
+    }
+
+    public static boolean makeLightning(Block block) {
+        if(!block.getWorld().isBedWorks() || block.getWorld().hasStorm()){
+            if(block.getWorld().getHighestBlockAt(block.getLocation()).getLocation().getBlockY() == block.getLocation().getBlockY()){
+                block.getWorld().strikeLightning(block.getLocation().add(0.5,1,0.5));
+                return true;
+            }
+        }
+        return false;
     }
 }

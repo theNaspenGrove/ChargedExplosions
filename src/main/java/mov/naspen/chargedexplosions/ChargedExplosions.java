@@ -26,7 +26,7 @@ public final class ChargedExplosions extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityDamageEventListener(), this);
         getServer().getPluginManager().registerEvents(new BlockRedstoneEventListener(), this);
         getServer().getPluginManager().registerEvents(new ProjectileHitEventListener(), this);
-
+        getServer().getPluginManager().registerEvents(new PlayerInteractEventListener(), this);
     }
 
     @Override
