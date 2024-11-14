@@ -15,7 +15,7 @@ import static mov.naspen.chargedexplosions.utilities.BlockSearch.SearchByExplosi
 public class EntityExplodeEventListener implements Listener {
     @EventHandler
     public void onEntityExplodeEvent(EntityExplodeEvent event) {
-        if(event.getEntityType() == EntityType.PRIMED_TNT) {
+        if(event.getEntityType() == EntityType.TNT) {
             if (event.getEntity().isGlowing() || (event.getEntity().getType() == EntityType.CREEPER && ((Creeper)event.getEntity()).isPowered())) {
                 for (Block block : event.blockList()) {
                     if (block.getType() == Material.BUDDING_AMETHYST) {

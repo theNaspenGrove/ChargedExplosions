@@ -11,7 +11,7 @@ public class EntityDamageEventListener implements Listener {
     @EventHandler
     public void onEntityDamageEvent(EntityDamageEvent event) {
         if(event.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION || event.getCause() == EntityDamageEvent.DamageCause.BLOCK_EXPLOSION){
-            if(event.getEntityType() == EntityType.DROPPED_ITEM){
+            if(event.getEntityType() == EntityType.ITEM){
                 if(((Item) event.getEntity()).getItemStack().getType() == Material.BUDDING_AMETHYST){
                     event.setCancelled(true);
                 }
